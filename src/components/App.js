@@ -11,7 +11,7 @@ class App extends Component {
             <div className="box">
                 <div>
                     <div className="messages">
-                        <Message/>
+                        <Message pseudo="Chris"/>
                     </div>
 
                     <Formulaire/>
