@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "marked": "^0.3.19",
+    "re-base": "^3.2.2",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
-    "react-scripts": "1.1.1"
+    "react-router": "^4.2.0",
+    "react-scripts": "1.1.1",
+    "react-transition-group": "^1.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
