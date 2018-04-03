@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Message extends Component {
 
@@ -23,6 +24,11 @@ class Message extends Component {
         return(
             this.preRender(this.props.isUser(this.props.details.pseudo))
         )
+    }
+
+    // Permet d'indiquer les erreurs en cas de suppresion de props ou d'appel de fonction
+    static propTypes = {
+        details: PropTypes.object.isRequired
     }
 }
 

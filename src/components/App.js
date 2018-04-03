@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 // Import Components
 import Formulaire from './Formulaire';
@@ -8,7 +9,7 @@ import Message from './Message';
 import base from '../base'
 
 //Import Css
-import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import { CSSTransitionGroup } from 'react-transition-group' // ES6
 import '../animation.css';
 
 
@@ -67,8 +68,8 @@ class App extends Component {
                     component="div" 
                     className="message"
                     transitionName="message"
-                    transtionEnterTimeout={200}
-                    transitionLeaveTimeOut={200}>
+                    transitionEnterTimeout={200}
+                    transitionLeaveTimeout={200}>
                         {messages}
                     </CSSTransitionGroup>
                     </div>
@@ -76,13 +77,18 @@ class App extends Component {
                     <Formulaire 
                         addMessage={ this.addMessage } 
                         pseudo={ this.props.match.params.pseudo }
-                        length="140"
+                        length={140}
                     />
                 </div>
                 <div>
                 </div>
             </div>
         )
+    }
+
+    // Permet d'indiquer les erreurs en cas de suppresion de props ou d'appel de fonction
+    static propTypes = {
+        match: PropTypes.object.isRequired
     }
 }
 

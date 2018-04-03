@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Formulaire extends Component {
 
@@ -50,6 +51,13 @@ class Formulaire extends Component {
             </form>
         )
     }
+
+    // Permet d'indiquer les erreurs en cas de suppresion de props ou d'appel de fonction
+    static propTypes = {
+        addMessage: PropTypes.func.isRequired,
+        pseudo: PropTypes.string.isRequired,
+        length: PropTypes.number.isRequired,
+    };
 }
 
 export default Formulaire;
